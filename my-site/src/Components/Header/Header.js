@@ -16,7 +16,7 @@ class Header extends Component {
   render() {
     return (
       <TitleWrapper>
-        <Title>Hayden Works</Title>
+        <Title>Hayden Development</Title>
       </TitleWrapper>
     );
   }

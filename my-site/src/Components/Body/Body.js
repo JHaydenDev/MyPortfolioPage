@@ -4,7 +4,7 @@ import About from "./About";
 import Contact from "./Contact";
 import Resume from "./Resume";
 import Projects from "./Projects";
-import Home from "./Home";
+import Home from "./Home/Home";
 import styled, { keyframes } from "styled-components";
 
 

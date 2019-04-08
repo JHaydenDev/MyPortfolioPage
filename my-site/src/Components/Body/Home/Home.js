@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import Slider from './Carousel/Carousel';
 
 const Wrapper = styled.div`
   background: rgb(0, 0, 0); /* The Fallback */
@@ -14,7 +15,7 @@ class Home extends Component {
   render() {
     return (
       <Wrapper>
-        <h2>This is the Home!!!</h2>
+        <Slider/>
       </Wrapper>
     );
   }
