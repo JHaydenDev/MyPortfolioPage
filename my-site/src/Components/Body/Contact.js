@@ -16,7 +16,9 @@ const Wrapper = styled.div`
 class Contact extends Component {
   render() {
     return (
-      <Wrapper>This is the Contact!!!</Wrapper>
+      <Wrapper>
+        <h2>This is the Contact!!!</h2>
+      </Wrapper>
     );
   }
 }

@@ -16,7 +16,9 @@ const Wrapper = styled.div`
 class About extends Component {
   render() {
     return (
-      <Wrapper>This is the About!!!</Wrapper>
+      <Wrapper>
+        <h2>This is the About!!!</h2>
+      </Wrapper>
     );
   }
 }

@@ -17,7 +17,9 @@ const Wrapper = styled.div`
 class Projects extends Component {
   render() {
     return (
-      <Wrapper>This is the Projects!!!</Wrapper>
+      <Wrapper>
+      <h2>This is the Projects!!!</h2>
+    </Wrapper>
     );
   }
 }

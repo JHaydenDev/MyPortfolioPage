@@ -16,7 +16,9 @@ const Wrapper = styled.div`
 class Resume extends Component {
   render() {
     return (
-      <Wrapper>This is the Resume!!!</Wrapper>
+      <Wrapper>
+        <h2>This is the Resume!!!</h2>
+      </Wrapper>
     );
   }
 }
