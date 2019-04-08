@@ -5,22 +5,34 @@ import Contact from "./Contact";
 import Resume from "./Resume";
 import Projects from "./Projects";
 import Home from "./Home";
+import styled from 'styled-components';
+
+
+const StyledLink = styled(Link)`
+  color: green;
+  text-decoration: none;
+  margin: 2%;
+`;
+
+const LinkWrapper = styled(Link)`
+  
+`;
 
 class Body extends Component {
   render() {
     return (
       <div>
-        <nav>
-          <Link to="/">Home</Link>
+        <LinkWrapper>
+          <StyledLink to="/">Home</StyledLink>
 
-          <Link to="/about">About</Link>
+          <StyledLink to="/about">About</StyledLink>
 
-          <Link to="/contact/">Contact</Link>
+          <StyledLink to="/contact/">Contact</StyledLink>
 
-          <Link to="/resume/">Resume</Link>
+          <StyledLink to="/resume/">Resume</StyledLink>
 
-          <Link to="/projects/">Projects</Link>
-        </nav>
+          <StyledLink to="/projects/">Projects</StyledLink>
+        </LinkWrapper>
 
         <Route path="/" exact component={Home} />
         <Route path="/about" exact component={About} />
