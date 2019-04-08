@@ -5,20 +5,30 @@ import Contact from "./Contact";
 import Resume from "./Resume";
 import Projects from "./Projects";
 import Home from "./Home";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+
+const morph = keyframes`
+ 
+`;
 
 const StyledLink = styled(Link)`
   color: white;
   text-decoration: none;
-  margin: 2%;
+  padding: 2%;
+  &:hover{
+    color:aqua;
+    transition: 0.5s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+  }
 `;
 
 const LinkWrapper = styled.div`
   background: rgb(0, 0, 0); /* The Fallback */
   background: rgba(0, 0, 0, 0.5);
   width: 100%;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  padding-top: 4%;
+  padding-bottom: 4%;
 `;
 
 class Body extends Component {

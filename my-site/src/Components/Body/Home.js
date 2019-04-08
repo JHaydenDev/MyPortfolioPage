@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import styled from "styled-components";
-
-
 
 const Wrapper = styled.div`
   background: rgb(0, 0, 0); /* The Fallback */
@@ -12,11 +10,12 @@ const Wrapper = styled.div`
   padding-bottom: 2%;
 `;
 
-
 class Home extends Component {
   render() {
     return (
-      <Wrapper>This is the Home!!!</Wrapper>
+      <Wrapper>
+        <h2>This is the Home!!!</h2>
+      </Wrapper>
     );
   }
 }
