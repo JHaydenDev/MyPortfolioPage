@@ -4,23 +4,27 @@ import Header from "./Components/Header/Header";
 import Body from "./Components/Body/Body";
 import Footer from "./Components/Footer/Footer";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import styled from 'styled-components';
+import styled from "styled-components";
+import BackgroundImg from "./Background.jpg";
 
-
-const AppWrapper = styled.div`
-text-align: center;
+const BackgroundLayer = styled.div`
+  text-align: center;
+  background: url(${BackgroundImg});
+  color:white;
+  height: 100vh;
 `;
+
 
 class App extends Component {
   render() {
     return (
-      <AppWrapper>
-        <Header />
-        <Router>
-          <Body />
-        </Router>
-        <Footer />
-      </AppWrapper>
+      <BackgroundLayer>
+          <Header />
+          <Router>
+            <Body />
+          </Router>
+          <Footer />
+      </BackgroundLayer>
     );
   }
 }

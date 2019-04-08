@@ -1,16 +1,24 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React, { Component } from "react";
+import styled from "styled-components";
 
 
-const StyledLink = styled.h1`
-  color: green;
+const TitleWrapper = styled.div`
+  height:30%
 `;
 
+const Title = styled.h1`
+  padding: 4%;
+  margin-top: 0;
+  background: rgb(0, 0, 0); /* The Fallback */
+  background: rgba(0, 0, 0, 0.5);
+`;
 
 class Header extends Component {
   render() {
     return (
-      <h1>Hayden Works</h1>
+      <TitleWrapper>
+        <Title>Hayden Works</Title>
+      </TitleWrapper>
     );
   }
 }

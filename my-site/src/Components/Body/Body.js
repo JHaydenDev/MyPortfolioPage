@@ -5,17 +5,20 @@ import Contact from "./Contact";
 import Resume from "./Resume";
 import Projects from "./Projects";
 import Home from "./Home";
-import styled from 'styled-components';
-
+import styled from "styled-components";
 
 const StyledLink = styled(Link)`
-  color: green;
+  color: white;
   text-decoration: none;
   margin: 2%;
 `;
 
-const LinkWrapper = styled(Link)`
-  
+const LinkWrapper = styled.div`
+  background: rgb(0, 0, 0); /* The Fallback */
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
 `;
 
 class Body extends Component {
