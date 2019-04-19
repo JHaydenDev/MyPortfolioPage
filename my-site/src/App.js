@@ -11,7 +11,11 @@ const BackgroundLayer = styled.div`
   text-align: center;
   background: url(${BackgroundImg});
   color:white;
-  height: 100vh;
+  height: 100%;
+  background-size: cover;
+  min-height: 100vh;
+  background-repeat:no-repeat;
+  
 `;
 
 

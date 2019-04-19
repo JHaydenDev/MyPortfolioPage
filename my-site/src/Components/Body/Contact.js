@@ -10,6 +10,7 @@ const Wrapper = styled.div`
   margin-top: 5%;
   padding-top: 2%;
   padding-bottom: 2%;
+  min-height: 50vh;
 `;
 
 

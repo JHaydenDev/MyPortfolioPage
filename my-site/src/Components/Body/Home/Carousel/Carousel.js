@@ -1,76 +1,87 @@
 import React, { Component } from "react";
-import Slide from "./Slide";
-import LeftArrow from "./LeftArrow";
-import RightArrow from "./RightArrow";
+import { Carousel } from "react-bootstrap";
+
 import styled from "styled-components";
 
-const TitleWrapper = styled.div``;
+const DoggoImg = styled.img`
+  height: ;
+  width: 50% !important;
+  margin: auto;
+`;
 
-const Title = styled.h1``;
+// const Title = styled.h1``;
 
-export default class Slider extends Component {
-  constructor(props) {
-    super(props);
+class ControlledCarousel extends React.Component {
+  constructor(props, context) {
+    super(props, context);
+
+    this.handleSelect = this.handleSelect.bind(this);
 
     this.state = {
-      images: [
-        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/aurora.jpg",
-        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/canyon.jpg",
-        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/city.jpg",
-        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/desert.jpg",
-        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/mountains.jpg",
-        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/redsky.jpg",
-        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/sandy-shores.jpg",
-        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/tree-of-life.jpg"
-      ],
-      currentIndex: 0,
-      translateValue: 0
+      index: 0,
+      direction: null
     };
   }
 
-  goToPrevSlide = () => {};
-
-  goToNextSlide = () => {
-    // Exiting the method early if we are at the end of the images array.
-    // We also want to reset currentIndex and translateValue, so we return
-    // to the first image in the array.
-    if (this.state.currentIndex === this.state.images.length - 1) {
-      return this.setState({
-        currentIndex: 0,
-        translateValue: 0
-      });
-    }
-
-    // This will not run if we met the if condition above
-    this.setState(prevState => ({
-      currentIndex: prevState.currentIndex + 1,
-      translateValue: prevState.translateValue + -this.slideWidth()
-    }));
-  };
-
-  slideWidth = () => {
-    return document.querySelector(".slide").clientWidth;
-  };
+  handleSelect(selectedIndex, e) {
+    this.setState({
+      index: selectedIndex,
+      direction: e.direction
+    });
+  }
 
   render() {
+    const { index, direction } = this.state;
+
     return (
-      <div className="slider">
-        <div
-          className="slider-wrapper"
-          style={{
-            transform: `translateX(${this.state.translateValue}px)`,
-            transition: "transform ease-out 0.45s"
-          }}
-        >
-          {this.state.images.map((image, i) => (
-            <Slide key={i} image={image} />
-          ))}
-        </div>
+      <Carousel
+        interval={null}
+        activeIndex={index}
+        direction={direction}
+        onSelect={this.handleSelect}
+      >
+        <Carousel.Item>
+          <DoggoImg
+            className="d-block w-100"
+            src="https://cdn-images-1.medium.com/max/1600/0*P2kX3N1VZBz2X12X.png"
+            alt="First slide"
+          />
+          <Carousel.Caption>
+            <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <DoggoImg
+            className="d-block w-100"
+            src="https://cdn-images-1.medium.com/max/1600/0*P2kX3N1VZBz2X12X.png"
+            alt="Third slide"
+          />
 
-        <LeftArrow goToPrevSlide={this.goToPrevSlide} />
+          <Carousel.Caption>
+            <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <DoggoImg
+            className="d-block w-100"
+            src="https://cdn-images-1.medium.com/max/1600/0*P2kX3N1VZBz2X12X.png"
+            alt="Third slide"
+          />
 
-        <RightArrow goToNextSlide={this.goToNextSlide} />
-      </div>
+          <Carousel.Caption>
+            <h3>Third slide label</h3>
+            <p>
+              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            </p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
     );
   }
 }
+
+
+
+export default ControlledCarousel;

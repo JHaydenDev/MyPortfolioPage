@@ -5,12 +5,7 @@ import Contact from "./Contact";
 import Resume from "./Resume";
 import Projects from "./Projects";
 import Home from "./Home/Home";
-import styled, { keyframes } from "styled-components";
-
-
-const morph = keyframes`
- 
-`;
+import styled from "styled-components";
 
 const StyledLink = styled(Link)`
   color: white;
