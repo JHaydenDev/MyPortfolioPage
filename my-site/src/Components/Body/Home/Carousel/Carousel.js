@@ -4,12 +4,9 @@ import { Carousel } from "react-bootstrap";
 import styled from "styled-components";
 
 const DoggoImg = styled.img`
-  height: ;
   width: 50% !important;
   margin: auto;
 `;
-
-// const Title = styled.h1``;
 
 class ControlledCarousel extends React.Component {
   constructor(props, context) {
