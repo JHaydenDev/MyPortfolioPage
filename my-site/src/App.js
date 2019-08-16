@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import Header from "./Components/Header/Header";
 import Body from "./Components/Body/Body";
-import Footer from "./Components/Footer/Footer";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import styled from "styled-components";
 import BackgroundImg from "./Background.jpg";
@@ -29,7 +28,7 @@ class App extends Component {
           <Router>
             <Body />
           </Router>
-          <Footer />
+
         </AppWrapper>
       </BackgroundLayer>
     );

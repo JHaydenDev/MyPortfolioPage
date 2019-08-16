@@ -51,7 +51,7 @@ class About extends Component {
           <p>
             On a personal note. I enjoy spending time with my partner Cali and
             our dog Penny. We spend a bit of time in Chicago out by the lake,
-            hiking, having game night with friends and experiencing everything
+            hiking, having game night with friends, and experiencing everything
             this great city has to offer.
           </p>
         </ParagraphWrapper>
